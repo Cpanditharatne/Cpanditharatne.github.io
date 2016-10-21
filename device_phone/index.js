@@ -21,11 +21,9 @@ PhoneResponsive={"785":{
 ,
 "text116":{"x":197,"y":31,"w":409,"h":32,"txtscale":100}
 ,
-"text114":{"x":30,"y":83,"w":729,"h":21,"txtscale":100}
-,
 "video416":{"x":470,"y":236,"w":303,"h":183}
 ,
-"text270":{"x":16,"y":81,"w":439,"h":343,"txtscale":100,"bltArr":null}
+"text270":{"x":16,"y":79,"w":439,"h":343,"txtscale":100,"bltArr":null}
 ,
 "RCDResetQuestion":function(){
 try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)console.log(e.message);}
@@ -57,11 +55,9 @@ try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)
 ,
 "text116":{"x":172,"y":22,"w":285,"h":64,"txtscale":100}
 ,
-"text114":{"x":31,"y":95,"w":435,"h":44,"txtscale":100}
-,
 "video416":{"x":287,"y":303,"w":185,"h":127}
 ,
-"text270":{"x":10,"y":104,"w":268,"h":504,"txtscale":100,"bltArr":null}
+"text270":{"x":10,"y":102,"w":268,"h":504,"txtscale":100,"bltArr":null}
 ,
 "RCDResetQuestion":function(){
 try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)console.log(e.message);}

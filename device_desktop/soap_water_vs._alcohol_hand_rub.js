@@ -21,13 +21,11 @@ DesktopResponsive={"1009":{
 ,
 "text116":{"x":246,"y":33,"w":548,"h":37,"txtscale":100}
 ,
-"text114":{"x":25,"y":93,"w":958,"h":23,"txtscale":100}
+"text1698":{"x":521,"y":179,"w":436,"h":318,"txtscale":100,"bltArr":null}
 ,
-"text1698":{"x":518,"y":199,"w":436,"h":318,"txtscale":100,"bltArr":null}
+"text1680":{"x":41,"y":178,"w":436,"h":318,"txtscale":100,"bltArr":null}
 ,
-"text1680":{"x":43,"y":202,"w":436,"h":318,"txtscale":100,"bltArr":null}
-,
-"text1659":{"x":32,"y":135,"w":915,"h":80,"txtscale":100}
+"text1659":{"x":21,"y":99,"w":915,"h":80,"txtscale":100}
 ,
 "RCDResetQuestion":function(){
 try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)console.log(e.message);}

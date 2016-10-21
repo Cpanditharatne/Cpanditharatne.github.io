@@ -12,6 +12,17 @@
 <link rel="stylesheet" href="trivantis.css" type="text/css" />
 <link rel="stylesheet" href="dialog.css" type="text/css" />
 <style type="text/css">
+  @media print {body { display:none; }}
+  html, body, div, span, applet, object, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, ins, del, form, input, textarea, select, button, option, optgroup, hr, br {
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  :not(input):not(textarea){
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+  }
     h1 { margin-top: 0; margin-bottom: 0; font-weight:normal; }
 </style>
 
@@ -55,6 +66,7 @@ function initGEV(){
    hmr = new Hammer(document.getElementById('pageDIV'));
 }
 
+trivProtected = true;
 trivWeb20Popups = true;
 
 var arObjs = [];
@@ -125,8 +137,6 @@ VarPageInTitle = new Variable( 'VarPageInTitle', null, 0, 0, null, null, 'title_
 VarPageInTitle.set( '6' )
 VarPagesInTitle = new Variable( 'VarPagesInTitle', null, 0, 0, null, null, 'title_3' )
 VarPagesInTitle.set( '8' )
-VarCurrentPageName = new Variable( 'VarCurrentPageName', null, 0, 0, null, null, 'title_3' )
-VarCurrentPageName.set( 'Question 1' )
 VarQuestion_0001 = new Variable( 'VarQuestion_0001', '', 0, 0, null, null, 'title_3', false )
 VarTriQA_2164 = new Variable( 'VarTriQA_2164', '0', 0, 0, null, 365, 'title_3', true )
 
@@ -162,7 +172,6 @@ function init() {
     image157.init()
     text1274.init()
     text116.init()
-    text114.init()
     qu2164.init()
     text2167.init()
     text2168.init()
@@ -189,7 +198,6 @@ function init() {
     image157.activate()
     text1274.activate()
     text116.activate()
-    text114.activate()
     qu2164.activate()
     text2167.activate()
     text2168.activate()
@@ -212,7 +220,7 @@ function init() {
     Update_qu2164()
     RandomizeQu_2164()
 
-    action130();action123();action115();
+    action130();action123();
     if ( trivPageTracking.GetRangeStatus(2117) == 'notstarted' ) trivPageTracking.SetRangeStatus(2117,2);
     if( location.hash )
     {
@@ -283,6 +291,45 @@ function trivLeavePage() {
     }
 }
 
+function disableRC(e) {
+    var key;
+    if(is.ie) key = event.button;
+    else key = e.which;
+    if (key == 2 || key == 3) {
+        return false;
+    }
+}
+if(document.layers) document.captureEvents(Event.MOUSEDOWN);
+document.onmousedown=disableRC;
+document.oncontextmenu=new Function("return false");
+
+function disableCtrlK(e){
+    var arrKeys = new Array("a", "c", "u", "p");
+    var iCharCode;
+    var bCombo = false;
+    var bAllowPrint = false;
+    if(is.ie) { iCharCode = event.keyCode; e = event;}
+    else iCharCode = e.charCode;
+    if( e.keyCode == 45 ) bCombo = true;
+    var sChar = String.fromCharCode(iCharCode).toLowerCase();
+    if(e.ctrlKey) {
+        for( i = 0; i < arrKeys.length ;i++) {
+            if(bAllowPrint && arrKeys[i] == "p") continue;
+            if(arrKeys[i].toLowerCase() == sChar || bCombo) {
+                if(is.ie) e.returnValue = false;
+                else return false;
+            }
+        }
+    }
+}
+if(document.layers) document.captureEvents(Event.KEYPRESS | Event.KEYDOWN);
+if(is.ie) document.onkeydown=disableCtrlK
+else document.onkeypress=disableCtrlK
+
+document.onselectstart=new Function ("return false");
+
+trivProtected = true;
+
 function trivPrevPage() {
     trivExitPage( 'proper_hand_washing_procedures.html', true )
 }
@@ -316,27 +363,27 @@ function doImmFeedback( objId ) {
   if(!qu2164.hasBeenProcessed) {
     if( ans_VarQuestion_0001 != '\u0041\u006C\u006C\u0020\u006F\u0066\u0020\u0074\u0068\u0065\u0020\u0061\u0062\u006F\u0076\u0065' && ans_VarQuestion_0001 != '~~~null~~~' ) 
     { //2 
-trivActFBCnt++; action2164_23(onAfterFBAction);return 0;  } //2 
+trivActFBCnt++; action2164_29(onAfterFBAction);return 0;  } //2 
 
     else if( ans_VarQuestion_0001 != '\u0041\u006C\u006C\u0020\u006F\u0066\u0020\u0074\u0068\u0065\u0020\u0061\u0062\u006F\u0076\u0065' && ans_VarQuestion_0001 != '~~~null~~~' ) 
     { //2 
-trivActFBCnt++; action2164_24(onAfterFBAction);return 0;  } //2 
+trivActFBCnt++; action2164_30(onAfterFBAction);return 0;  } //2 
 
     else if( ans_VarQuestion_0001 != '\u0041\u006C\u006C\u0020\u006F\u0066\u0020\u0074\u0068\u0065\u0020\u0061\u0062\u006F\u0076\u0065' && ans_VarQuestion_0001 != '~~~null~~~' ) 
     { //2 
-trivActFBCnt++; action2164_25(onAfterFBAction);return 0;  } //2 
+trivActFBCnt++; action2164_31(onAfterFBAction);return 0;  } //2 
 
     else if( ans_VarQuestion_0001 != '\u0041\u006C\u006C\u0020\u006F\u0066\u0020\u0074\u0068\u0065\u0020\u0061\u0062\u006F\u0076\u0065' && ans_VarQuestion_0001 != '~~~null~~~' ) 
     { //2 
-trivActFBCnt++; action2164_26(onAfterFBAction);return 0;  } //2 
+trivActFBCnt++; action2164_32(onAfterFBAction);return 0;  } //2 
 
     else if( ans_VarQuestion_0001 != '\u0041\u006C\u006C\u0020\u006F\u0066\u0020\u0074\u0068\u0065\u0020\u0061\u0062\u006F\u0076\u0065' && ans_VarQuestion_0001 != '~~~null~~~' ) 
     { //2 
-trivActFBCnt++; action2164_27(onAfterFBAction);return 0;  } //2 
+trivActFBCnt++; action2164_33(onAfterFBAction);return 0;  } //2 
 
     else if( ans_VarQuestion_0001 == '\u0041\u006C\u006C\u0020\u006F\u0066\u0020\u0074\u0068\u0065\u0020\u0061\u0062\u006F\u0076\u0065' ) 
     { //1 
-        trivActFBCnt++; action2164_28(onAfterFBAction);  return 0;
+        trivActFBCnt++; action2164_34(onAfterFBAction);  return 0;
   } //1
 
     }
@@ -428,12 +475,6 @@ function button121onUp() {
   action122();
 }
 
-function action115(fn){
-    text114.actionChangeContents(VarCurrentPageName.getValue(),'alignright','1'); 
-    if(fn && typeof(fn) == 'string' ) eval(fn);
-    else if(fn && typeof(fn) == 'function' ) fn();
-}
-
 function Offset_qu2164(bDevRotate) {
 }
 
@@ -451,32 +492,32 @@ function Update_qu2164() {
 function RandomizeQu_2164() {
   qu2164.randomize();
 }
-function action2164_23(fn){
-    if(!document.getElementById("DLG_Div_2164"))trivAlert( 'action2164_23', 'Title 3', 'You answered the question incorrectly.', fn );
+function action2164_29(fn){
+    if(!document.getElementById("DLG_Div_2164"))trivAlert( 'action2164_29', 'Title 3', 'You answered the question incorrectly.', fn );
 }
 
-function action2164_24(fn){
-    if(!document.getElementById("DLG_Div_2164"))trivAlert( 'action2164_24', 'Title 3', 'You answered the question incorrectly.', fn );
+function action2164_30(fn){
+    if(!document.getElementById("DLG_Div_2164"))trivAlert( 'action2164_30', 'Title 3', 'You answered the question incorrectly.', fn );
 }
 
-function action2164_25(fn){
-    if(!document.getElementById("DLG_Div_2164"))trivAlert( 'action2164_25', 'Title 3', 'You answered the question incorrectly.', fn );
+function action2164_31(fn){
+    if(!document.getElementById("DLG_Div_2164"))trivAlert( 'action2164_31', 'Title 3', 'You answered the question incorrectly.', fn );
 }
 
-function action2164_26(fn){
-    if(!document.getElementById("DLG_Div_2164"))trivAlert( 'action2164_26', 'Title 3', 'You answered the question incorrectly.', fn );
+function action2164_32(fn){
+    if(!document.getElementById("DLG_Div_2164"))trivAlert( 'action2164_32', 'Title 3', 'You answered the question incorrectly.', fn );
 }
 
-function action2164_27(fn){
-    if(!document.getElementById("DLG_Div_2164"))trivAlert( 'action2164_27', 'Title 3', 'You answered the question incorrectly.', fn );
+function action2164_33(fn){
+    if(!document.getElementById("DLG_Div_2164"))trivAlert( 'action2164_33', 'Title 3', 'You answered the question incorrectly.', fn );
 }
 
-function action2164_28(fn){
-    if(!document.getElementById("DLG_Div_2164"))trivAlert( 'action2164_28', 'Title 3', 'Correct!', fn );
+function action2164_34(fn){
+    if(!document.getElementById("DLG_Div_2164"))trivAlert( 'action2164_34', 'Title 3', 'Correct!', fn );
 }
 
 if( is.min ){
-button147 = new ObjButton('button147', 'Home',834,14,49.00,48.00,1,37,'div','',1,'',0)
+button147 = new ObjButton('button147', 'Home',834,14,49.00,48.00,1,36,'div','',1,'',0)
 button147.setFillStyle(4)
 button147.initRotateAngle(0,0,0,-0.00,-0.00,49,48)
 button147.initHasShadow(0)
@@ -491,7 +532,7 @@ button147.hasOnUp = true
 button147.capture=4
 button147.build()
 
-button141 = new ObjButton('button141', 'Help',888,14,49.00,48.00,1,38,'div','',0,'',0)
+button141 = new ObjButton('button141', 'Help',888,14,49.00,48.00,1,37,'div','',0,'',0)
 button141.setFillStyle(4)
 button141.initRotateAngle(0,0,0,-0.00,-0.00,49,48)
 button141.initHasShadow(0)
@@ -506,7 +547,7 @@ button141.hasOnUp = true
 button141.capture=4
 button141.build()
 
-button135 = new ObjButton('button135', 'Exit',941,14,49.00,48.00,1,39,'div','',1,'',0)
+button135 = new ObjButton('button135', 'Exit',941,14,49.00,48.00,1,38,'div','',1,'',0)
 button135.setFillStyle(4)
 button135.initRotateAngle(0,0,0,-0.00,-0.00,49,48)
 button135.initHasShadow(0)
@@ -521,7 +562,7 @@ button135.hasOnUp = true
 button135.capture=4
 button135.build()
 
-button128 = new ObjButton('button128', 'Back',888,601,48.00,48.00,1,40,'div','',1,'',1)
+button128 = new ObjButton('button128', 'Back',888,601,48.00,48.00,1,39,'div','',1,'',1)
 button128.setFillStyle(4)
 button128.initRotateAngle(0,0,0,-0.00,-0.00,48,48)
 button128.initHasShadow(0)
@@ -536,7 +577,7 @@ button128.hasOnUp = true
 button128.capture=4
 button128.build()
 
-button121 = new ObjButton('button121', 'Next',941,601,48.00,48.00,1,41,'div','',1,'',1)
+button121 = new ObjButton('button121', 'Next',941,601,48.00,48.00,1,40,'div','',1,'',1)
 button121.setFillStyle(4)
 button121.initRotateAngle(0,0,0,-0.00,-0.00,48,48)
 button121.initHasShadow(0)
@@ -613,21 +654,6 @@ text116.arrCSSStyles.push('span.text116Font1 { font-size:24px; font-family:"Sego
 text116.arrCSSStyles.push('span.text116Font2 { font-size:13px; font-family:"Arial", sans-serif; color:#010101;}');
 text116.build()
 
-text114 = new ObjText('text114',null,25,93,958,23,1,10,null,'div',null,0 )
-text114.initSLine(0)
-text114.initHasBullet(0)
-text114.initRotateAngle(0,0,0)
-text114.initHasOuterShadow(0)
-text114.initHasTextShadow(0)
-text114.initHasBorder(0)
-text114.initHasOutline(0)
-text114.initHasMargin(0)
-text114.addIe8Attr(25, 93, 958, 23, 0, 0)
-text114.addOpacity(100)
-text114.arrCSSStyles = new Array();
-text114.arrCSSStyles.push('span.text114Font1 { font-size:16px; font-family:"Arial", sans-serif; color:#000000; font-weight:bold;}');
-text114.build()
-
 qu2164 = new ObjInline('qu2164',null,140,200,801,299,1,0)
 qu2164.isGrp = true
 qu2164.addChild('text2167')
@@ -652,7 +678,7 @@ qu2164.addChoice('radio2207','text2206','')
 qu2164.ansVar=VarQuestion_0001;
 qu2164.build()
 
-text2167 = new ObjText('text2167',null,140,200,729,32,1,11,null,'div',null,0 )
+text2167 = new ObjText('text2167',null,140,200,729,32,1,10,null,'div',null,0 )
 text2167.initSLine(1)
 text2167.initHasBullet(0)
 text2167.initRotateAngle(0,0,0)
@@ -668,7 +694,7 @@ text2167.arrCSSStyles.push('span.text2167Font1 { font-size:19px; font-family:"Ar
 text2167.arrCSSStyles.push('span.text2167Font2 { font-size:19px; font-family:"Arial", sans-serif; color:#000000;}');
 text2167.build()
 
-text2168 = new ObjText('text2168',null,167,240,702,32,1,12,null,'div',null,0 )
+text2168 = new ObjText('text2168',null,167,240,702,32,1,11,null,'div',null,0 )
 text2168.initSLine(1)
 text2168.initHasBullet(0)
 text2168.initRotateAngle(0,0,0)
@@ -683,12 +709,12 @@ text2168.arrCSSStyles = new Array();
 text2168.arrCSSStyles.push('span.text2168Font1 { font-size:19px; font-family:"Arial", sans-serif; color:#000000;}');
 text2168.build()
 
-radio2169 = new ObjInline('radio2169',null,(is.ie?138:137),(is.ie?239:238),null,null,1,13, 0, null, null, 0)
+radio2169 = new ObjInline('radio2169',null,(is.ie?138:137),(is.ie?239:238),null,null,1,12, 0, null, null, 0)
 radio2169.arrCSSStyles = new Array();
 radio2169.arrCSSStyles.push('');
 radio2169.build()
 
-text2170 = new ObjText('text2170',null,167,280,702,32,1,14,null,'div',null,0 )
+text2170 = new ObjText('text2170',null,167,280,702,32,1,13,null,'div',null,0 )
 text2170.initSLine(1)
 text2170.initHasBullet(0)
 text2170.initRotateAngle(0,0,0)
@@ -703,12 +729,12 @@ text2170.arrCSSStyles = new Array();
 text2170.arrCSSStyles.push('span.text2170Font1 { font-size:19px; font-family:"Arial", sans-serif; color:#000000;}');
 text2170.build()
 
-radio2171 = new ObjInline('radio2171',null,(is.ie?138:137),(is.ie?279:278),null,null,1,15, 0, null, null, 0)
+radio2171 = new ObjInline('radio2171',null,(is.ie?138:137),(is.ie?279:278),null,null,1,14, 0, null, null, 0)
 radio2171.arrCSSStyles = new Array();
 radio2171.arrCSSStyles.push('');
 radio2171.build()
 
-text2172 = new ObjText('text2172',null,167,320,702,32,1,16,null,'div',null,0 )
+text2172 = new ObjText('text2172',null,167,320,702,32,1,15,null,'div',null,0 )
 text2172.initSLine(1)
 text2172.initHasBullet(0)
 text2172.initRotateAngle(0,0,0)
@@ -723,12 +749,12 @@ text2172.arrCSSStyles = new Array();
 text2172.arrCSSStyles.push('span.text2172Font1 { font-size:19px; font-family:"Arial", sans-serif; color:#000000;}');
 text2172.build()
 
-radio2173 = new ObjInline('radio2173',null,(is.ie?138:137),(is.ie?319:318),null,null,1,17, 0, null, null, 0)
+radio2173 = new ObjInline('radio2173',null,(is.ie?138:137),(is.ie?319:318),null,null,1,16, 0, null, null, 0)
 radio2173.arrCSSStyles = new Array();
 radio2173.arrCSSStyles.push('');
 radio2173.build()
 
-text2174 = new ObjText('text2174',null,167,360,702,32,1,18,null,'div',null,0 )
+text2174 = new ObjText('text2174',null,167,360,702,32,1,17,null,'div',null,0 )
 text2174.initSLine(1)
 text2174.initHasBullet(0)
 text2174.initRotateAngle(0,0,0)
@@ -743,12 +769,12 @@ text2174.arrCSSStyles = new Array();
 text2174.arrCSSStyles.push('span.text2174Font1 { font-size:19px; font-family:"Arial", sans-serif; color:#000000;}');
 text2174.build()
 
-radio2175 = new ObjInline('radio2175',null,(is.ie?138:137),(is.ie?359:358),null,null,1,19, 0, null, null, 0)
+radio2175 = new ObjInline('radio2175',null,(is.ie?138:137),(is.ie?359:358),null,null,1,18, 0, null, null, 0)
 radio2175.arrCSSStyles = new Array();
 radio2175.arrCSSStyles.push('');
 radio2175.build()
 
-text2176 = new ObjText('text2176',null,167,400,702,32,1,20,null,'div',null,0 )
+text2176 = new ObjText('text2176',null,167,400,702,32,1,19,null,'div',null,0 )
 text2176.initSLine(1)
 text2176.initHasBullet(0)
 text2176.initRotateAngle(0,0,0)
@@ -763,12 +789,12 @@ text2176.arrCSSStyles = new Array();
 text2176.arrCSSStyles.push('span.text2176Font1 { font-size:19px; font-family:"Arial", sans-serif; color:#000000;}');
 text2176.build()
 
-radio2177 = new ObjInline('radio2177',null,(is.ie?138:137),(is.ie?399:398),null,null,1,21, 0, null, null, 0)
+radio2177 = new ObjInline('radio2177',null,(is.ie?138:137),(is.ie?399:398),null,null,1,20, 0, null, null, 0)
 radio2177.arrCSSStyles = new Array();
 radio2177.arrCSSStyles.push('');
 radio2177.build()
 
-text2206 = new ObjText('text2206',null,167,440,702,32,1,22,null,'div',null,0 )
+text2206 = new ObjText('text2206',null,167,440,702,32,1,21,null,'div',null,0 )
 text2206.initSLine(1)
 text2206.initHasBullet(0)
 text2206.initRotateAngle(0,0,0)
@@ -783,12 +809,12 @@ text2206.arrCSSStyles = new Array();
 text2206.arrCSSStyles.push('span.text2206Font1 { font-size:19px; font-family:"Arial", sans-serif; color:#000000;}');
 text2206.build()
 
-radio2207 = new ObjInline('radio2207',null,(is.ie?138:137),(is.ie?439:438),null,null,1,23, 0, null, null, 0)
+radio2207 = new ObjInline('radio2207',null,(is.ie?138:137),(is.ie?439:438),null,null,1,22, 0, null, null, 0)
 radio2207.arrCSSStyles = new Array();
 radio2207.arrCSSStyles.push('');
 radio2207.build()
 
-text2118 = new ObjText('text2118',null,12,114,755,33,1,24,null,'div',null,0 )
+text2118 = new ObjText('text2118',null,20,102,755,33,1,23,null,'div',null,0 )
 text2118.initSLine(1)
 text2118.initHasBullet(0)
 text2118.initRotateAngle(0,0,0)
@@ -797,7 +823,7 @@ text2118.initHasTextShadow(0)
 text2118.initHasBorder(0)
 text2118.initHasOutline(0)
 text2118.initHasMargin(0)
-text2118.addIe8Attr(12, 114, 755, 33, 0, 0)
+text2118.addIe8Attr(20, 102, 755, 33, 0, 0)
 text2118.addOpacity(100)
 text2118.arrCSSStyles = new Array();
 text2118.arrCSSStyles.push('span.text2118Font1 { font-size:24px; font-family:"Arial", sans-serif; color:#010101; font-weight:bold;}');
@@ -816,7 +842,6 @@ arObjs.push(image155);
 arObjs.push(image157);
 arObjs.push(text1274);
 arObjs.push(text116);
-arObjs.push(text114);
 arObjs.push(qu2164);
 arObjs.push(text2167);
 arObjs.push(text2168);
@@ -877,12 +902,6 @@ if( is.min ){
 <div id="text116"><a id="text116anc" style="display:block;height:0px;width:0px;"></a>
 <p  style="margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:left;" >
 <span class="text116Font1"  >Hand Hygiene Best Practice Guide</span ><span class="text116Font2" style="background-color:transparent" >
-</span ></p >
-</div>
-
-<div id="text114"><a id="text114anc" style="display:block;height:0px;width:0px;"></a>
-<p  style="margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:right;" >
-<span class="text114Font1"  >&lt;Page Title Auto Text&gt;
 </span ></p >
 </div>
 

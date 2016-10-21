@@ -21,11 +21,9 @@ TabletResponsive={"1009":{
 ,
 "text116":{"x":246,"y":33,"w":548,"h":37,"txtscale":100}
 ,
-"text114":{"x":25,"y":93,"w":958,"h":23,"txtscale":100}
-,
 "video2041":{"x":215,"y":158,"w":588,"h":365}
 ,
-"text2031":{"x":17,"y":98,"w":755,"h":50,"txtscale":100}
+"text2031":{"x":18,"y":98,"w":755,"h":50,"txtscale":100}
 ,
 "RCDResetQuestion":function(){
 try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)console.log(e.message);}
@@ -57,11 +55,9 @@ try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)
 ,
 "text116":{"x":197,"y":31,"w":409,"h":32,"txtscale":100}
 ,
-"text114":{"x":30,"y":83,"w":729,"h":21,"txtscale":100}
-,
 "video2041":{"x":167,"y":158,"w":457,"h":279}
 ,
-"text2031":{"x":13,"y":98,"w":587,"h":76,"txtscale":100}
+"text2031":{"x":14,"y":98,"w":587,"h":76,"txtscale":100}
 ,
 "RCDResetQuestion":function(){
 try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)console.log(e.message);}

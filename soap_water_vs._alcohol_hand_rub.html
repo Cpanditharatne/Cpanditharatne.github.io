@@ -11,6 +11,17 @@
 
 <link rel="stylesheet" href="trivantis.css" type="text/css" />
 <style type="text/css">
+  @media print {body { display:none; }}
+  html, body, div, span, applet, object, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, ins, del, form, input, textarea, select, button, option, optgroup, hr, br {
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  :not(input):not(textarea){
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+  }
 </style>
 
 <!--[if lt IE 7]>
@@ -52,6 +63,7 @@ function initGEV(){
    hmr = new Hammer(document.getElementById('pageDIV'));
 }
 
+trivProtected = true;
 trivWeb20Popups = true;
 
 var arObjs = [];
@@ -121,8 +133,6 @@ VarPageInTitle = new Variable( 'VarPageInTitle', null, 0, 0, null, null, 'title_
 VarPageInTitle.set( '4' )
 VarPagesInTitle = new Variable( 'VarPagesInTitle', null, 0, 0, null, null, 'title_3' )
 VarPagesInTitle.set( '8' )
-VarCurrentPageName = new Variable( 'VarCurrentPageName', null, 0, 0, null, null, 'title_3' )
-VarCurrentPageName.set( 'Soap & Water vs. Alcohol Hand Rub' )
 
 onload = responsiveInit
 detect();
@@ -156,7 +166,6 @@ function init() {
     image157.init()
     text1274.init()
     text116.init()
-    text114.init()
     text1698.init()
     text1680.init()
     text1659.init()
@@ -171,7 +180,6 @@ function init() {
     image157.activate()
     text1274.activate()
     text116.activate()
-    text114.activate()
     text1698.activate()
     text1680.activate()
     text1659.activate()
@@ -179,7 +187,7 @@ function init() {
     window.scrollTo(0,1);
     var titleManagerIndexWindow = (window && window.parent && window.parent.bIsTitleManagerIndexFile) ? window.parent : null;
     if(titleManagerIndexWindow)titleManagerIndexWindow.scrollTo(0,1);
-    action130();action123();action115();
+    action130();action123();
     if ( trivPageTracking.GetRangeStatus(1650) == 'notstarted' ) trivPageTracking.SetRangeStatus(1650,2);
     if( location.hash )
     {
@@ -247,6 +255,45 @@ function trivLeavePage() {
         }
     }
 }
+
+function disableRC(e) {
+    var key;
+    if(is.ie) key = event.button;
+    else key = e.which;
+    if (key == 2 || key == 3) {
+        return false;
+    }
+}
+if(document.layers) document.captureEvents(Event.MOUSEDOWN);
+document.onmousedown=disableRC;
+document.oncontextmenu=new Function("return false");
+
+function disableCtrlK(e){
+    var arrKeys = new Array("a", "c", "u", "p");
+    var iCharCode;
+    var bCombo = false;
+    var bAllowPrint = false;
+    if(is.ie) { iCharCode = event.keyCode; e = event;}
+    else iCharCode = e.charCode;
+    if( e.keyCode == 45 ) bCombo = true;
+    var sChar = String.fromCharCode(iCharCode).toLowerCase();
+    if(e.ctrlKey) {
+        for( i = 0; i < arrKeys.length ;i++) {
+            if(bAllowPrint && arrKeys[i] == "p") continue;
+            if(arrKeys[i].toLowerCase() == sChar || bCombo) {
+                if(is.ie) e.returnValue = false;
+                else return false;
+            }
+        }
+    }
+}
+if(document.layers) document.captureEvents(Event.KEYPRESS | Event.KEYDOWN);
+if(is.ie) document.onkeydown=disableCtrlK
+else document.onkeypress=disableCtrlK
+
+document.onselectstart=new Function ("return false");
+
+trivProtected = true;
 
 function trivPrevPage() {
     trivExitPage( 'efficacy_of_hand_hygiene.html', true )
@@ -350,14 +397,8 @@ function button121onUp() {
   action122();
 }
 
-function action115(fn){
-    text114.actionChangeContents(VarCurrentPageName.getValue(),'alignright','1'); 
-    if(fn && typeof(fn) == 'string' ) eval(fn);
-    else if(fn && typeof(fn) == 'function' ) fn();
-}
-
 if( is.min ){
-button147 = new ObjButton('button147', 'Home',834,14,49.00,48.00,1,25,'div','',1,'',0)
+button147 = new ObjButton('button147', 'Home',834,14,49.00,48.00,1,24,'div','',1,'',0)
 button147.setFillStyle(4)
 button147.initRotateAngle(0,0,0,-0.00,-0.00,49,48)
 button147.initHasShadow(0)
@@ -372,7 +413,7 @@ button147.hasOnUp = true
 button147.capture=4
 button147.build()
 
-button141 = new ObjButton('button141', 'Help',888,14,49.00,48.00,1,26,'div','',0,'',0)
+button141 = new ObjButton('button141', 'Help',888,14,49.00,48.00,1,25,'div','',0,'',0)
 button141.setFillStyle(4)
 button141.initRotateAngle(0,0,0,-0.00,-0.00,49,48)
 button141.initHasShadow(0)
@@ -387,7 +428,7 @@ button141.hasOnUp = true
 button141.capture=4
 button141.build()
 
-button135 = new ObjButton('button135', 'Exit',941,14,49.00,48.00,1,27,'div','',1,'',0)
+button135 = new ObjButton('button135', 'Exit',941,14,49.00,48.00,1,26,'div','',1,'',0)
 button135.setFillStyle(4)
 button135.initRotateAngle(0,0,0,-0.00,-0.00,49,48)
 button135.initHasShadow(0)
@@ -402,7 +443,7 @@ button135.hasOnUp = true
 button135.capture=4
 button135.build()
 
-button128 = new ObjButton('button128', 'Back',888,601,48.00,48.00,1,28,'div','',1,'',1)
+button128 = new ObjButton('button128', 'Back',888,601,48.00,48.00,1,27,'div','',1,'',1)
 button128.setFillStyle(4)
 button128.initRotateAngle(0,0,0,-0.00,-0.00,48,48)
 button128.initHasShadow(0)
@@ -417,7 +458,7 @@ button128.hasOnUp = true
 button128.capture=4
 button128.build()
 
-button121 = new ObjButton('button121', 'Next',941,601,48.00,48.00,1,29,'div','',1,'',1)
+button121 = new ObjButton('button121', 'Next',941,601,48.00,48.00,1,28,'div','',1,'',1)
 button121.setFillStyle(4)
 button121.initRotateAngle(0,0,0,-0.00,-0.00,48,48)
 button121.initHasShadow(0)
@@ -494,22 +535,7 @@ text116.arrCSSStyles.push('span.text116Font1 { font-size:24px; font-family:"Sego
 text116.arrCSSStyles.push('span.text116Font2 { font-size:13px; font-family:"Arial", sans-serif; color:#010101;}');
 text116.build()
 
-text114 = new ObjText('text114',null,25,93,958,23,1,10,null,'div',null,0 )
-text114.initSLine(0)
-text114.initHasBullet(0)
-text114.initRotateAngle(0,0,0)
-text114.initHasOuterShadow(0)
-text114.initHasTextShadow(0)
-text114.initHasBorder(0)
-text114.initHasOutline(0)
-text114.initHasMargin(0)
-text114.addIe8Attr(25, 93, 958, 23, 0, 0)
-text114.addOpacity(100)
-text114.arrCSSStyles = new Array();
-text114.arrCSSStyles.push('span.text114Font1 { font-size:16px; font-family:"Arial", sans-serif; color:#000000; font-weight:bold;}');
-text114.build()
-
-text1698 = new ObjText('text1698',null,518,199,436,318,1,11,null,'div',null,0 )
+text1698 = new ObjText('text1698',null,521,179,436,318,1,10,null,'div',null,0 )
 text1698.initSLine(0)
 text1698.initHasBullet(1)
 text1698.initRotateAngle(0,0,0)
@@ -518,7 +544,7 @@ text1698.initHasTextShadow(0)
 text1698.initHasBorder(0)
 text1698.initHasOutline(0)
 text1698.initHasMargin(0)
-text1698.addIe8Attr(518, 199, 436, 318, 0, 0)
+text1698.addIe8Attr(521, 179, 436, 318, 0, 0)
 text1698.addOpacity(100)
 text1698.arrCSSStyles = new Array();
 text1698.arrCSSStyles.push('span.text1698Font1 { font-size:19px; font-family:"Arial", sans-serif; color:#010101; font-weight:bold; font-style:normal; text-decoration:normal;}');
@@ -529,7 +555,7 @@ text1698.arrCSSStyles.push('span.text1698Font3 { font-size:19px; font-family:"Ar
 text1698.arrCSSStyles.push('li.text1698Font3 { font-size:19px; font-family:"Arial", sans-serif; color:#010101; font-weight:normal; font-style:normal; text-decoration:normal;}');
 text1698.build()
 
-text1680 = new ObjText('text1680',null,43,202,436,318,1,12,null,'div',null,0 )
+text1680 = new ObjText('text1680',null,41,178,436,318,1,11,null,'div',null,0 )
 text1680.initSLine(0)
 text1680.initHasBullet(1)
 text1680.initRotateAngle(0,0,0)
@@ -538,7 +564,7 @@ text1680.initHasTextShadow(0)
 text1680.initHasBorder(0)
 text1680.initHasOutline(0)
 text1680.initHasMargin(0)
-text1680.addIe8Attr(43, 202, 436, 318, 0, 0)
+text1680.addIe8Attr(41, 178, 436, 318, 0, 0)
 text1680.addOpacity(100)
 text1680.arrCSSStyles = new Array();
 text1680.arrCSSStyles.push('span.text1680Font1 { font-size:19px; font-family:"Arial", sans-serif; color:#010101; font-weight:bold; font-style:normal; text-decoration:normal;}');
@@ -549,7 +575,7 @@ text1680.arrCSSStyles.push('span.text1680Font3 { font-size:13px; font-family:"Ar
 text1680.arrCSSStyles.push('li.text1680Font3 { font-size:13px; font-family:"Arial", sans-serif; color:#010101; font-weight:normal; font-style:normal; text-decoration:normal;}');
 text1680.build()
 
-text1659 = new ObjText('text1659',null,32,135,915,80,1,13,null,'div',null,0 )
+text1659 = new ObjText('text1659',null,21,99,915,80,1,12,null,'div',null,0 )
 text1659.initSLine(0)
 text1659.initHasBullet(0)
 text1659.initRotateAngle(0,0,0)
@@ -558,7 +584,7 @@ text1659.initHasTextShadow(0)
 text1659.initHasBorder(0)
 text1659.initHasOutline(0)
 text1659.initHasMargin(0)
-text1659.addIe8Attr(32, 135, 915, 80, 0, 0)
+text1659.addIe8Attr(21, 99, 915, 80, 0, 0)
 text1659.addOpacity(100)
 text1659.arrCSSStyles = new Array();
 text1659.arrCSSStyles.push('span.text1659Font1 { font-size:24px; font-family:"Arial", sans-serif; color:#010101; font-weight:bold;}');
@@ -576,7 +602,6 @@ arObjs.push(image155);
 arObjs.push(image157);
 arObjs.push(text1274);
 arObjs.push(text116);
-arObjs.push(text114);
 arObjs.push(text1698);
 arObjs.push(text1680);
 arObjs.push(text1659);
@@ -628,37 +653,28 @@ if( is.min ){
 </span ></p >
 </div>
 
-<div id="text114"><a id="text114anc" style="display:block;height:0px;width:0px;"></a>
-<p  style="margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:right;" >
-<span class="text114Font1"  >&lt;Page Title Auto Text&gt;
-</span ></p >
-</div>
-
 <div id="text1698"><a id="text1698anc" style="display:block;height:0px;width:0px;"></a>
-<p  legLH="1.107" style="margin-left:0px;text-indent:0px;line-height:1.107;margin-top:0px;margin-bottom:0px;text-align:left;" >
-<span class="text1698Font1"  >Alcohol Hand Rub
-</span ></p >
-<p  legLH="1.156" style="margin-left:0px;text-indent:0px;line-height:0.938;margin-top:0px;margin-bottom:0px;text-align:left;" >
-<span class="text1698Font2"  >
+<p  legLH="1.661" style="margin-left:0px;text-indent:0px;line-height:1.660;margin-top:0px;margin-bottom:3px;text-align:left;" >
+<span class="text1698Font1" style="position:relative;top:-4px;" >Alcohol Hand Rub</span ><span class="text1698Font2" style="background-color:transparentposition:relative;top:-4px;" >
 </span ></p >
 <ul  style="list-style-position:outside;text-align:left;" >
-<li  class="text1698Font3" data-bltIndnt="0" style="line-height:1.661;position:relative;margin-left:23px;margin-top:0px;margin-bottom:0px; list-style-image:url('images/text16984DiamondsBulletFont12.png'); padding-left:1px;"><!--{ 
+<li  class="text1698Font3" data-bltIndnt="0" style="line-height:1.661;position:relative;margin-left:23px;margin-top:0px;margin-bottom:3px; list-style-image:url('images/text16984DiamondsBulletFont12.png'); padding-left:1px;"><!--{ 
 data-bltIndnt:0
 } --><span class="text1698Font3"  >Heavy workloadsEasier to locate nearby
 </span ></li >
-<li  class="text1698Font3" data-bltIndnt="0" style="line-height:1.661;position:relative;margin-left:23px;margin-top:0px;margin-bottom:0px; list-style-image:url('images/text16984DiamondsBulletFont12.png'); padding-left:1px;"><!--{ 
+<li  class="text1698Font3" data-bltIndnt="0" style="line-height:1.661;position:relative;margin-left:23px;margin-top:0px;margin-bottom:3px; list-style-image:url('images/text16984DiamondsBulletFont12.png'); padding-left:1px;"><!--{ 
 data-bltIndnt:0
 } --><span class="text1698Font3"  >Requires stock maintenance 
 </span ></li >
-<li  class="text1698Font3" data-bltIndnt="0" style="line-height:1.661;position:relative;margin-left:23px;margin-top:0px;margin-bottom:0px; list-style-image:url('images/text16984DiamondsBulletFont12.png'); padding-left:1px;"><!--{ 
+<li  class="text1698Font3" data-bltIndnt="0" style="line-height:1.661;position:relative;margin-left:23px;margin-top:0px;margin-bottom:3px; list-style-image:url('images/text16984DiamondsBulletFont12.png'); padding-left:1px;"><!--{ 
 data-bltIndnt:0
 } --><span class="text1698Font3"  >Less irritating to skin
 </span ></li >
-<li  class="text1698Font3" data-bltIndnt="0" style="line-height:1.661;position:relative;margin-left:23px;margin-top:0px;margin-bottom:0px; list-style-image:url('images/text16984DiamondsBulletFont12.png'); padding-left:1px;"><!--{ 
+<li  class="text1698Font3" data-bltIndnt="0" style="line-height:1.661;position:relative;margin-left:23px;margin-top:0px;margin-bottom:3px; list-style-image:url('images/text16984DiamondsBulletFont12.png'); padding-left:1px;"><!--{ 
 data-bltIndnt:0
 } --><span class="text1698Font3"  >Saves time (56 min vs. 18 min in 8 h)
 </span ></li >
-<li  class="text1698Font3" data-bltIndnt="0" style="line-height:1.661;position:relative;margin-left:23px;margin-top:0px;margin-bottom:0px; list-style-image:url('images/text16984DiamondsBulletFont12.png'); padding-left:1px;"><!--{ 
+<li  class="text1698Font3" data-bltIndnt="0" style="line-height:1.661;position:relative;margin-left:23px;margin-top:0px;margin-bottom:3px; list-style-image:url('images/text16984DiamondsBulletFont12.png'); padding-left:1px;"><!--{ 
 data-bltIndnt:0
 } --><span class="text1698Font3"  >Alcohol hand rub more effective at reducing bacterial counts on hands compared with soap &amp; water</span ><span class="text1698Font2" style="background-color:transparent" >
 </span ></li >
@@ -666,12 +682,9 @@ data-bltIndnt:0
 </div>
 
 <div id="text1680"><a id="text1680anc" style="display:block;height:0px;width:0px;"></a>
-<p  legLH="1.107" style="margin-left:0px;text-indent:0px;line-height:1.107;margin-top:0px;margin-bottom:0px;text-align:left;" >
-<span class="text1680Font1"  >Soap &amp; Water
+<p  legLH="1.661" style="margin-left:0px;text-indent:0px;line-height:1.660;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text1680Font1" style="position:relative;top:-5px;" >Soap &amp; Water
 </span ></p >
-<p  legLH="1.107" style="margin-left:0px;text-indent:0px;line-height:1.107;margin-top:0px;margin-bottom:0px;text-align:left;" >
-<span class="text1680Font2" style="background-color:transparent" >
-&nbsp;</span ></p >
 <ul  style="list-style-position:outside;text-align:left;" >
 <li  class="text1680Font2" data-bltIndnt="0" style="line-height:1.661;position:relative;margin-left:23px;margin-top:0px;margin-bottom:0px; list-style-image:url('images/text16804DiamondsBulletFont11.png'); padding-left:1px;"><!--{ 
 data-bltIndnt:0

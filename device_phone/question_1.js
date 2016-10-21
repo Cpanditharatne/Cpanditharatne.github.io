@@ -21,8 +21,6 @@ PhoneResponsive={"785":{
 ,
 "text116":{"x":197,"y":31,"w":409,"h":32,"txtscale":100}
 ,
-"text114":{"x":30,"y":83,"w":729,"h":21,"txtscale":100}
-,
 "text2167":{"x":109,"y":156,"w":567,"h":42,"txtscale":100}
 ,
 "text2168":{"x":130,"y":187,"w":546,"h":25,"txtscale":100}
@@ -49,7 +47,7 @@ PhoneResponsive={"785":{
 ,
 "radio2207":{"x":106,"y":341,"fsize":13}
 ,
-"text2118":{"x":9,"y":89,"w":587,"h":28,"txtscale":100}
+"text2118":{"x":16,"y":79,"w":587,"h":28,"txtscale":100}
 ,
 "RCDResetQuestion":function(){
 try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)console.log(e.message);}
@@ -80,8 +78,6 @@ qu2164.reorgChoice();}
 "text1274":{"x":5,"y":19,"w":101,"h":80,"txtscale":100,"i":"images/PhonePortrait_text1274.png"}
 ,
 "text116":{"x":172,"y":22,"w":285,"h":64,"txtscale":100}
-,
-"text114":{"x":31,"y":95,"w":435,"h":44,"txtscale":100}
 ,
 "text2167":{"x":66,"y":95,"w":347,"h":64,"txtscale":100}
 ,
