@@ -164,7 +164,6 @@ function init() {
     image153.init()
     image155.init()
     image157.init()
-    text1274.init()
     text116.init()
     text1698.init()
     text1680.init()
@@ -178,7 +177,6 @@ function init() {
     image153.activate()
     image155.activate()
     image157.activate()
-    text1274.activate()
     text116.activate()
     text1698.activate()
     text1680.activate()
@@ -398,7 +396,7 @@ function button121onUp() {
 }
 
 if( is.min ){
-button147 = new ObjButton('button147', 'Home',834,14,49.00,48.00,1,24,'div','',1,'',0)
+button147 = new ObjButton('button147', 'Home',834,14,49.00,48.00,1,23,'div','',1,'',0)
 button147.setFillStyle(4)
 button147.initRotateAngle(0,0,0,-0.00,-0.00,49,48)
 button147.initHasShadow(0)
@@ -413,7 +411,7 @@ button147.hasOnUp = true
 button147.capture=4
 button147.build()
 
-button141 = new ObjButton('button141', 'Help',888,14,49.00,48.00,1,25,'div','',0,'',0)
+button141 = new ObjButton('button141', 'Help',888,14,49.00,48.00,1,24,'div','',0,'',0)
 button141.setFillStyle(4)
 button141.initRotateAngle(0,0,0,-0.00,-0.00,49,48)
 button141.initHasShadow(0)
@@ -428,7 +426,7 @@ button141.hasOnUp = true
 button141.capture=4
 button141.build()
 
-button135 = new ObjButton('button135', 'Exit',941,14,49.00,48.00,1,26,'div','',1,'',0)
+button135 = new ObjButton('button135', 'Exit',941,14,49.00,48.00,1,25,'div','',1,'',0)
 button135.setFillStyle(4)
 button135.initRotateAngle(0,0,0,-0.00,-0.00,49,48)
 button135.initHasShadow(0)
@@ -443,7 +441,7 @@ button135.hasOnUp = true
 button135.capture=4
 button135.build()
 
-button128 = new ObjButton('button128', 'Back',888,601,48.00,48.00,1,27,'div','',1,'',1)
+button128 = new ObjButton('button128', 'Back',888,601,48.00,48.00,1,26,'div','',1,'',1)
 button128.setFillStyle(4)
 button128.initRotateAngle(0,0,0,-0.00,-0.00,48,48)
 button128.initHasShadow(0)
@@ -458,7 +456,7 @@ button128.hasOnUp = true
 button128.capture=4
 button128.build()
 
-button121 = new ObjButton('button121', 'Next',941,601,48.00,48.00,1,28,'div','',1,'',1)
+button121 = new ObjButton('button121', 'Next',941,601,48.00,48.00,1,27,'div','',1,'',1)
 button121.setFillStyle(4)
 button121.initRotateAngle(0,0,0,-0.00,-0.00,48,48)
 button121.initHasShadow(0)
@@ -473,12 +471,11 @@ button121.hasOnUp = true
 button121.capture=4
 button121.build()
 
-og151 = new ObjInline('og151',null,0,0,1009,662,1,0)
+og151 = new ObjInline('og151',null,0,0,-1,-1,1,0)
 og151.isGrp = true
 og151.addChild('image153')
 og151.addChild('image155')
 og151.addChild('image157')
-og151.addChild('text1274')
 og151.build()
 
 image153 = new ObjImage('image153','images/top_bar.png','',0,0,1009,81,1,5,'div',null, 0 )
@@ -511,15 +508,7 @@ image157.addBorder(0)
 image157.addOpacity(100)
 image157.build()
 
-text1274 = new ObjImage('text1274','images/text1274.png','Sample Project',10,19,212,53,1,8,'div',null,0 )
-text1274.initRotateAngle(0,0,0)
-text1274.initHasShadow(0)
-text1274.addIe8Attr(10, 19, 212, 53, 0, 0)
-text1274.addBorder(0)
-text1274.addOpacity(100)
-text1274.build()
-
-text116 = new ObjText('text116',null,246,33,548,37,1,9,null,'div',null,0 )
+text116 = new ObjText('text116',null,246,33,548,37,1,8,null,'div',null,0 )
 text116.initSLine(1)
 text116.initHasBullet(0)
 text116.initRotateAngle(0,0,0)
@@ -535,7 +524,7 @@ text116.arrCSSStyles.push('span.text116Font1 { font-size:24px; font-family:"Sego
 text116.arrCSSStyles.push('span.text116Font2 { font-size:13px; font-family:"Arial", sans-serif; color:#010101;}');
 text116.build()
 
-text1698 = new ObjText('text1698',null,521,179,436,318,1,10,null,'div',null,0 )
+text1698 = new ObjText('text1698',null,521,179,436,318,1,9,null,'div',null,0 )
 text1698.initSLine(0)
 text1698.initHasBullet(1)
 text1698.initRotateAngle(0,0,0)
@@ -555,7 +544,7 @@ text1698.arrCSSStyles.push('span.text1698Font3 { font-size:19px; font-family:"Ar
 text1698.arrCSSStyles.push('li.text1698Font3 { font-size:19px; font-family:"Arial", sans-serif; color:#010101; font-weight:normal; font-style:normal; text-decoration:normal;}');
 text1698.build()
 
-text1680 = new ObjText('text1680',null,41,178,436,318,1,11,null,'div',null,0 )
+text1680 = new ObjText('text1680',null,41,178,436,318,1,10,null,'div',null,0 )
 text1680.initSLine(0)
 text1680.initHasBullet(1)
 text1680.initRotateAngle(0,0,0)
@@ -575,7 +564,7 @@ text1680.arrCSSStyles.push('span.text1680Font3 { font-size:13px; font-family:"Ar
 text1680.arrCSSStyles.push('li.text1680Font3 { font-size:13px; font-family:"Arial", sans-serif; color:#010101; font-weight:normal; font-style:normal; text-decoration:normal;}');
 text1680.build()
 
-text1659 = new ObjText('text1659',null,21,99,915,80,1,12,null,'div',null,0 )
+text1659 = new ObjText('text1659',null,21,99,915,80,1,11,null,'div',null,0 )
 text1659.initSLine(0)
 text1659.initHasBullet(0)
 text1659.initRotateAngle(0,0,0)
@@ -600,7 +589,6 @@ arObjs.push(og151);
 arObjs.push(image153);
 arObjs.push(image155);
 arObjs.push(image157);
-arObjs.push(text1274);
 arObjs.push(text116);
 arObjs.push(text1698);
 arObjs.push(text1680);
@@ -643,7 +631,6 @@ if( is.min ){
     document.write(image153.div)
     document.write(image155.div)
     document.write(image157.div)
-    document.write(text1274.div)
 }
 </script>
 

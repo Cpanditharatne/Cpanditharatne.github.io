@@ -17,8 +17,6 @@ PhoneResponsive={"785":{
 ,
 "image157":{"x":632,"y":525,"w":2,"h":65,"i":"images/bottom_line_1.png"}
 ,
-"text1274":{"x":8,"y":15,"w":165,"h":80,"txtscale":100,"i":"images/PhoneLandscape_text1274.png"}
-,
 "text116":{"x":197,"y":31,"w":409,"h":32,"txtscale":100}
 ,
 "image987":{"x":558,"y":131,"w":216,"h":246,"i":"images/image_508.jpg"}
@@ -30,39 +28,37 @@ try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)
 }
 ,
 "RCDResultResize":function(){}
-,"preload":['images/top_bar002.png','images/bottom_bar002.png','images/PhoneLandscape_button147.png','images/PhoneLandscape_button147_over.png','images/PhoneLandscape_button147_down.png','images/PhoneLandscape_button147_disabled.png','images/PhoneLandscape_button141.png','images/PhoneLandscape_button141_over.png','images/PhoneLandscape_button141_down.png','images/PhoneLandscape_button141_disabled.png','images/PhoneLandscape_button135.png','images/PhoneLandscape_button135_over.png','images/PhoneLandscape_button135_down.png','images/PhoneLandscape_button135_disabled.png','images/PhoneLandscape_button128.png','images/PhoneLandscape_button128_over.png','images/PhoneLandscape_button128_down.png','images/PhoneLandscape_button128_disabled.png','images/PhoneLandscape_button121.png','images/PhoneLandscape_button121_over.png','images/PhoneLandscape_button121_down.png','images/PhoneLandscape_button121_disabled.png','images/PhoneLandscape_text1274.png']
+,"preload":['images/top_bar002.png','images/bottom_bar002.png','images/PhoneLandscape_button147.png','images/PhoneLandscape_button147_over.png','images/PhoneLandscape_button147_down.png','images/PhoneLandscape_button147_disabled.png','images/PhoneLandscape_button141.png','images/PhoneLandscape_button141_over.png','images/PhoneLandscape_button141_down.png','images/PhoneLandscape_button141_disabled.png','images/PhoneLandscape_button135.png','images/PhoneLandscape_button135_over.png','images/PhoneLandscape_button135_down.png','images/PhoneLandscape_button135_disabled.png','images/PhoneLandscape_button128.png','images/PhoneLandscape_button128_over.png','images/PhoneLandscape_button128_down.png','images/PhoneLandscape_button128_disabled.png','images/PhoneLandscape_button121.png','images/PhoneLandscape_button121_over.png','images/PhoneLandscape_button121_down.png','images/PhoneLandscape_button121_disabled.png']
 },
 "480":{
-"pageLayer":{"w":480,"h":855,"bgColor":"#ffffff"}
+"pageLayer":{"w":480,"h":782,"bgColor":"#ffffff"}
 ,
-"button147":{"x":115,"y":785,"w":61.00,"h":60.00,"stylemods":[{"sel":"div.button147Text","decl":" { position:absolute; left:2px; top:2px; width:57px; height:56px;}"},{"sel":"span.button147Text","decl":" { display:table-cell; position:relative; width:57px; height:56px; vertical-align:middle; text-align:center; line-height:20px; font-size:20px; font-family:\"Lucida Sans Unicode\"; color:#ffffff;}"}],"i":"images/PhonePortrait_button147.png","irol":"images/PhonePortrait_button147_over.png","ion":"images/PhonePortrait_button147_down.png","idis":"images/PhonePortrait_button147_disabled.png"}
+"button147":{"x":115,"y":712,"w":61.00,"h":60.00,"stylemods":[{"sel":"div.button147Text","decl":" { position:absolute; left:2px; top:2px; width:57px; height:56px;}"},{"sel":"span.button147Text","decl":" { display:table-cell; position:relative; width:57px; height:56px; vertical-align:middle; text-align:center; line-height:20px; font-size:20px; font-family:\"Lucida Sans Unicode\"; color:#ffffff;}"}],"i":"images/PhonePortrait_button147.png","irol":"images/PhonePortrait_button147_over.png","ion":"images/PhonePortrait_button147_down.png","idis":"images/PhonePortrait_button147_disabled.png"}
 ,
-"button141":{"x":210,"y":785,"w":61.00,"h":60.00,"stylemods":[{"sel":"div.button141Text","decl":" { position:absolute; left:2px; top:2px; width:57px; height:56px;}"},{"sel":"span.button141Text","decl":" { display:table-cell; position:relative; width:57px; height:56px; vertical-align:middle; text-align:center; line-height:20px; font-size:20px; font-family:\"Lucida Sans Unicode\"; color:#ffffff;}"}],"i":"images/PhonePortrait_button141.png","irol":"images/PhonePortrait_button141_over.png","ion":"images/PhonePortrait_button141_down.png","idis":"images/PhonePortrait_button141_disabled.png"}
+"button141":{"x":210,"y":712,"w":61.00,"h":60.00,"stylemods":[{"sel":"div.button141Text","decl":" { position:absolute; left:2px; top:2px; width:57px; height:56px;}"},{"sel":"span.button141Text","decl":" { display:table-cell; position:relative; width:57px; height:56px; vertical-align:middle; text-align:center; line-height:20px; font-size:20px; font-family:\"Lucida Sans Unicode\"; color:#ffffff;}"}],"i":"images/PhonePortrait_button141.png","irol":"images/PhonePortrait_button141_over.png","ion":"images/PhonePortrait_button141_down.png","idis":"images/PhonePortrait_button141_disabled.png"}
 ,
-"button135":{"x":20,"y":785,"w":61.00,"h":60.00,"stylemods":[{"sel":"div.button135Text","decl":" { position:absolute; left:2px; top:2px; width:57px; height:56px;}"},{"sel":"span.button135Text","decl":" { display:table-cell; position:relative; width:57px; height:56px; vertical-align:middle; text-align:center; line-height:20px; font-size:20px; font-family:\"Lucida Sans Unicode\"; color:#ffffff;}"}],"i":"images/PhonePortrait_button135.png","irol":"images/PhonePortrait_button135_over.png","ion":"images/PhonePortrait_button135_down.png","idis":"images/PhonePortrait_button135_disabled.png"}
+"button135":{"x":20,"y":712,"w":61.00,"h":60.00,"stylemods":[{"sel":"div.button135Text","decl":" { position:absolute; left:2px; top:2px; width:57px; height:56px;}"},{"sel":"span.button135Text","decl":" { display:table-cell; position:relative; width:57px; height:56px; vertical-align:middle; text-align:center; line-height:20px; font-size:20px; font-family:\"Lucida Sans Unicode\"; color:#ffffff;}"}],"i":"images/PhonePortrait_button135.png","irol":"images/PhonePortrait_button135_over.png","ion":"images/PhonePortrait_button135_down.png","idis":"images/PhonePortrait_button135_disabled.png"}
 ,
-"button128":{"x":305,"y":785,"w":61.00,"h":60.00,"stylemods":[{"sel":"div.button128Text","decl":" { position:absolute; left:2px; top:2px; width:57px; height:56px;}"},{"sel":"span.button128Text","decl":" { display:table-cell; position:relative; width:57px; height:56px; vertical-align:middle; text-align:center; line-height:20px; font-size:20px; font-family:\"Lucida Sans Unicode\"; color:#ffffff;}"}],"i":"images/PhonePortrait_button128.png","irol":"images/PhonePortrait_button128_over.png","ion":"images/PhonePortrait_button128_down.png","idis":"images/PhonePortrait_button128_disabled.png"}
+"button128":{"x":305,"y":712,"w":61.00,"h":60.00,"stylemods":[{"sel":"div.button128Text","decl":" { position:absolute; left:2px; top:2px; width:57px; height:56px;}"},{"sel":"span.button128Text","decl":" { display:table-cell; position:relative; width:57px; height:56px; vertical-align:middle; text-align:center; line-height:20px; font-size:20px; font-family:\"Lucida Sans Unicode\"; color:#ffffff;}"}],"i":"images/PhonePortrait_button128.png","irol":"images/PhonePortrait_button128_over.png","ion":"images/PhonePortrait_button128_down.png","idis":"images/PhonePortrait_button128_disabled.png"}
 ,
-"button121":{"x":400,"y":785,"w":61.00,"h":60.00,"stylemods":[{"sel":"div.button121Text","decl":" { position:absolute; left:2px; top:2px; width:57px; height:56px;}"},{"sel":"span.button121Text","decl":" { display:table-cell; position:relative; width:57px; height:56px; vertical-align:middle; text-align:center; line-height:20px; font-size:20px; font-family:\"Lucida Sans Unicode\"; color:#ffffff;}"}],"i":"images/PhonePortrait_button121.png","irol":"images/PhonePortrait_button121_over.png","ion":"images/PhonePortrait_button121_down.png","idis":"images/PhonePortrait_button121_disabled.png"}
+"button121":{"x":400,"y":712,"w":61.00,"h":60.00,"stylemods":[{"sel":"div.button121Text","decl":" { position:absolute; left:2px; top:2px; width:57px; height:56px;}"},{"sel":"span.button121Text","decl":" { display:table-cell; position:relative; width:57px; height:56px; vertical-align:middle; text-align:center; line-height:20px; font-size:20px; font-family:\"Lucida Sans Unicode\"; color:#ffffff;}"}],"i":"images/PhonePortrait_button121.png","irol":"images/PhonePortrait_button121_over.png","ion":"images/PhonePortrait_button121_down.png","idis":"images/PhonePortrait_button121_disabled.png"}
 ,
 "image153":{"x":0,"y":0,"w":480,"h":78,"i":"images/top_bar003.png"}
 ,
-"image155":{"x":0,"y":769,"w":480,"h":86,"i":"images/bottom_bar003.png"}
+"image155":{"x":0,"y":696,"w":480,"h":86,"i":"images/bottom_bar003.png"}
 ,
-"image157":{"x":240,"y":775,"w":2,"h":80,"i":"images/bottom_line_1001.png"}
+"image157":{"x":240,"y":702,"w":2,"h":80,"i":"images/bottom_line_1001.png"}
 ,
-"text1274":{"x":5,"y":19,"w":101,"h":80,"txtscale":100,"i":"images/PhonePortrait_text1274.png"}
+"text116":{"x":165,"y":8,"w":285,"h":64,"txtscale":100}
 ,
-"text116":{"x":172,"y":22,"w":285,"h":64,"txtscale":100}
+"image987":{"x":291,"y":489,"w":183,"h":206,"i":"images/image_508.jpg"}
 ,
-"image987":{"x":283,"y":253,"w":183,"h":206,"i":"images/image_508.jpg"}
-,
-"text674":{"x":59,"y":160,"w":360,"h":695,"txtscale":100,"bltArr":null}
+"text674":{"x":15,"y":87,"w":360,"h":695,"txtscale":100,"bltArr":null}
 ,
 "RCDResetQuestion":function(){
 try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)console.log(e.message);}
 }
 ,
 "RCDResultResize":function(){}
-,"preload":['images/top_bar003.png','images/bottom_bar003.png','images/bottom_line_1001.png','images/PhonePortrait_button147.png','images/PhonePortrait_button147_over.png','images/PhonePortrait_button147_down.png','images/PhonePortrait_button147_disabled.png','images/PhonePortrait_button141.png','images/PhonePortrait_button141_over.png','images/PhonePortrait_button141_down.png','images/PhonePortrait_button141_disabled.png','images/PhonePortrait_button135.png','images/PhonePortrait_button135_over.png','images/PhonePortrait_button135_down.png','images/PhonePortrait_button135_disabled.png','images/PhonePortrait_button128.png','images/PhonePortrait_button128_over.png','images/PhonePortrait_button128_down.png','images/PhonePortrait_button128_disabled.png','images/PhonePortrait_button121.png','images/PhonePortrait_button121_over.png','images/PhonePortrait_button121_down.png','images/PhonePortrait_button121_disabled.png','images/PhonePortrait_text1274.png']
+,"preload":['images/top_bar003.png','images/bottom_bar003.png','images/bottom_line_1001.png','images/PhonePortrait_button147.png','images/PhonePortrait_button147_over.png','images/PhonePortrait_button147_down.png','images/PhonePortrait_button147_disabled.png','images/PhonePortrait_button141.png','images/PhonePortrait_button141_over.png','images/PhonePortrait_button141_down.png','images/PhonePortrait_button141_disabled.png','images/PhonePortrait_button135.png','images/PhonePortrait_button135_over.png','images/PhonePortrait_button135_down.png','images/PhonePortrait_button135_disabled.png','images/PhonePortrait_button128.png','images/PhonePortrait_button128_over.png','images/PhonePortrait_button128_down.png','images/PhonePortrait_button128_disabled.png','images/PhonePortrait_button121.png','images/PhonePortrait_button121_over.png','images/PhonePortrait_button121_down.png','images/PhonePortrait_button121_disabled.png']
 }}

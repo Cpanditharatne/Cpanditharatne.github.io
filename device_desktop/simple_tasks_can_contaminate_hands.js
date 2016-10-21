@@ -17,8 +17,6 @@ DesktopResponsive={"1009":{
 ,
 "image157":{"x":846,"y":582,"w":2,"h":80,"i":"images/bottom_line_1.png"}
 ,
-"text1274":{"x":10,"y":19,"w":212,"h":53,"txtscale":100,"i":"images/text1274.png"}
-,
 "text116":{"x":246,"y":33,"w":548,"h":37,"txtscale":100}
 ,
 "image987":{"x":717,"y":169,"w":278,"h":316,"i":"images/image_508.jpg"}
@@ -30,5 +28,5 @@ try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)
 }
 ,
 "RCDResultResize":function(){}
-,"preload":['images/next.png','images/next_click.png','images/next_over.png','images/back.png','images/back_click.png','images/back_over.png','images/exit.png','images/exit_click.png','images/exit_over.png','images/help.png','images/help_click.png','images/help_over.png','images/home.png','images/home_click.png','images/home_over.png','images/top_bar.png','images/bottom_bar.png','images/bottom_line_1.png','images/image_508.jpg','images/button147.png','images/button147_over.png','images/button147_down.png','images/button147_disabled.png','images/button141.png','images/button141_over.png','images/button141_down.png','images/button141_disabled.png','images/button135.png','images/button135_over.png','images/button135_down.png','images/button135_disabled.png','images/button128.png','images/button128_over.png','images/button128_down.png','images/button128_disabled.png','images/button121.png','images/button121_over.png','images/button121_down.png','images/button121_disabled.png','images/text1274.png','images/text6744DiamondsBulletFont11.png','images/text6744DiamondsBulletFont10.png','images/text6744DiamondsBulletFont12.png']
+,"preload":['images/next.png','images/next_click.png','images/next_over.png','images/back.png','images/back_click.png','images/back_over.png','images/exit.png','images/exit_click.png','images/exit_over.png','images/help.png','images/help_click.png','images/help_over.png','images/home.png','images/home_click.png','images/home_over.png','images/top_bar.png','images/bottom_bar.png','images/bottom_line_1.png','images/image_508.jpg','images/button147.png','images/button147_over.png','images/button147_down.png','images/button147_disabled.png','images/button141.png','images/button141_over.png','images/button141_down.png','images/button141_disabled.png','images/button135.png','images/button135_over.png','images/button135_down.png','images/button135_disabled.png','images/button128.png','images/button128_over.png','images/button128_down.png','images/button128_disabled.png','images/button121.png','images/button121_over.png','images/button121_down.png','images/button121_disabled.png','images/text6744DiamondsBulletFont11.png','images/text6744DiamondsBulletFont10.png','images/text6744DiamondsBulletFont12.png']
 }}

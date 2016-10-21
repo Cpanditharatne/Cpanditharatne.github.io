@@ -17,8 +17,6 @@ TabletResponsive={"1009":{
 ,
 "image157":{"x":846,"y":582,"w":2,"h":80,"i":"images/bottom_line_1.png"}
 ,
-"text1274":{"x":10,"y":19,"w":212,"h":53,"txtscale":100,"i":"images/text1274.png"}
-,
 "text116":{"x":246,"y":33,"w":548,"h":37,"txtscale":100}
 ,
 "image987":{"x":717,"y":169,"w":278,"h":316,"i":"images/image_508.jpg"}
@@ -30,7 +28,7 @@ try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)
 }
 ,
 "RCDResultResize":function(){}
-,"preload":['images/TabletLandscape_button147.png','images/TabletLandscape_button147_over.png','images/TabletLandscape_button147_down.png','images/TabletLandscape_button147_disabled.png','images/TabletLandscape_button141.png','images/TabletLandscape_button141_over.png','images/TabletLandscape_button141_down.png','images/TabletLandscape_button141_disabled.png','images/TabletLandscape_button135.png','images/TabletLandscape_button135_over.png','images/TabletLandscape_button135_down.png','images/TabletLandscape_button135_disabled.png','images/TabletLandscape_button128.png','images/TabletLandscape_button128_over.png','images/TabletLandscape_button128_down.png','images/TabletLandscape_button128_disabled.png','images/TabletLandscape_button121.png','images/TabletLandscape_button121_over.png','images/TabletLandscape_button121_down.png','images/TabletLandscape_button121_disabled.png','images/text1274.png']
+,"preload":['images/TabletLandscape_button147.png','images/TabletLandscape_button147_over.png','images/TabletLandscape_button147_down.png','images/TabletLandscape_button147_disabled.png','images/TabletLandscape_button141.png','images/TabletLandscape_button141_over.png','images/TabletLandscape_button141_down.png','images/TabletLandscape_button141_disabled.png','images/TabletLandscape_button135.png','images/TabletLandscape_button135_over.png','images/TabletLandscape_button135_down.png','images/TabletLandscape_button135_disabled.png','images/TabletLandscape_button128.png','images/TabletLandscape_button128_over.png','images/TabletLandscape_button128_down.png','images/TabletLandscape_button128_disabled.png','images/TabletLandscape_button121.png','images/TabletLandscape_button121_over.png','images/TabletLandscape_button121_down.png','images/TabletLandscape_button121_disabled.png']
 },
 "785":{
 "pageLayer":{"w":785,"h":1000,"bgColor":"#ffffff"}
@@ -51,11 +49,9 @@ try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)
 ,
 "image157":{"x":632,"y":935,"w":2,"h":65,"i":"images/bottom_line_1.png"}
 ,
-"text1274":{"x":8,"y":19,"w":165,"h":80,"txtscale":100,"i":"images/TabletPortrait_text1274.png"}
-,
 "text116":{"x":197,"y":31,"w":409,"h":32,"txtscale":100}
 ,
-"image987":{"x":533,"y":319,"w":230,"h":261,"i":"images/image_508.jpg"}
+"image987":{"x":529,"y":100,"w":230,"h":261,"i":"images/image_508.jpg"}
 ,
 "text674":{"x":16,"y":101,"w":588,"h":511,"txtscale":100,"bltArr":null}
 ,
@@ -64,5 +60,5 @@ try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)
 }
 ,
 "RCDResultResize":function(){}
-,"preload":['images/top_bar001.png','images/bottom_bar001.png','images/TabletPortrait_button147.png','images/TabletPortrait_button147_over.png','images/TabletPortrait_button147_down.png','images/TabletPortrait_button147_disabled.png','images/TabletPortrait_button141.png','images/TabletPortrait_button141_over.png','images/TabletPortrait_button141_down.png','images/TabletPortrait_button141_disabled.png','images/TabletPortrait_button135.png','images/TabletPortrait_button135_over.png','images/TabletPortrait_button135_down.png','images/TabletPortrait_button135_disabled.png','images/TabletPortrait_button128.png','images/TabletPortrait_button128_over.png','images/TabletPortrait_button128_down.png','images/TabletPortrait_button128_disabled.png','images/TabletPortrait_button121.png','images/TabletPortrait_button121_over.png','images/TabletPortrait_button121_down.png','images/TabletPortrait_button121_disabled.png','images/TabletPortrait_text1274.png']
+,"preload":['images/top_bar001.png','images/bottom_bar001.png','images/TabletPortrait_button147.png','images/TabletPortrait_button147_over.png','images/TabletPortrait_button147_down.png','images/TabletPortrait_button147_disabled.png','images/TabletPortrait_button141.png','images/TabletPortrait_button141_over.png','images/TabletPortrait_button141_down.png','images/TabletPortrait_button141_disabled.png','images/TabletPortrait_button135.png','images/TabletPortrait_button135_over.png','images/TabletPortrait_button135_down.png','images/TabletPortrait_button135_disabled.png','images/TabletPortrait_button128.png','images/TabletPortrait_button128_over.png','images/TabletPortrait_button128_down.png','images/TabletPortrait_button128_disabled.png','images/TabletPortrait_button121.png','images/TabletPortrait_button121_over.png','images/TabletPortrait_button121_down.png','images/TabletPortrait_button121_disabled.png']
 }}

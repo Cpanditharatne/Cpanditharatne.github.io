@@ -170,7 +170,6 @@ function init() {
     image153.init()
     image155.init()
     image157.init()
-    text1274.init()
     text116.init()
     qu2164.init()
     text2167.init()
@@ -196,7 +195,6 @@ function init() {
     image153.activate()
     image155.activate()
     image157.activate()
-    text1274.activate()
     text116.activate()
     qu2164.activate()
     text2167.activate()
@@ -363,27 +361,27 @@ function doImmFeedback( objId ) {
   if(!qu2164.hasBeenProcessed) {
     if( ans_VarQuestion_0001 != '\u0041\u006C\u006C\u0020\u006F\u0066\u0020\u0074\u0068\u0065\u0020\u0061\u0062\u006F\u0076\u0065' && ans_VarQuestion_0001 != '~~~null~~~' ) 
     { //2 
-trivActFBCnt++; action2164_41(onAfterFBAction);return 0;  } //2 
+trivActFBCnt++; action2164_59(onAfterFBAction);return 0;  } //2 
 
     else if( ans_VarQuestion_0001 != '\u0041\u006C\u006C\u0020\u006F\u0066\u0020\u0074\u0068\u0065\u0020\u0061\u0062\u006F\u0076\u0065' && ans_VarQuestion_0001 != '~~~null~~~' ) 
     { //2 
-trivActFBCnt++; action2164_42(onAfterFBAction);return 0;  } //2 
+trivActFBCnt++; action2164_60(onAfterFBAction);return 0;  } //2 
 
     else if( ans_VarQuestion_0001 != '\u0041\u006C\u006C\u0020\u006F\u0066\u0020\u0074\u0068\u0065\u0020\u0061\u0062\u006F\u0076\u0065' && ans_VarQuestion_0001 != '~~~null~~~' ) 
     { //2 
-trivActFBCnt++; action2164_43(onAfterFBAction);return 0;  } //2 
+trivActFBCnt++; action2164_61(onAfterFBAction);return 0;  } //2 
 
     else if( ans_VarQuestion_0001 != '\u0041\u006C\u006C\u0020\u006F\u0066\u0020\u0074\u0068\u0065\u0020\u0061\u0062\u006F\u0076\u0065' && ans_VarQuestion_0001 != '~~~null~~~' ) 
     { //2 
-trivActFBCnt++; action2164_44(onAfterFBAction);return 0;  } //2 
+trivActFBCnt++; action2164_62(onAfterFBAction);return 0;  } //2 
 
     else if( ans_VarQuestion_0001 != '\u0041\u006C\u006C\u0020\u006F\u0066\u0020\u0074\u0068\u0065\u0020\u0061\u0062\u006F\u0076\u0065' && ans_VarQuestion_0001 != '~~~null~~~' ) 
     { //2 
-trivActFBCnt++; action2164_45(onAfterFBAction);return 0;  } //2 
+trivActFBCnt++; action2164_63(onAfterFBAction);return 0;  } //2 
 
     else if( ans_VarQuestion_0001 == '\u0041\u006C\u006C\u0020\u006F\u0066\u0020\u0074\u0068\u0065\u0020\u0061\u0062\u006F\u0076\u0065' ) 
     { //1 
-        trivActFBCnt++; action2164_46(onAfterFBAction);  return 0;
+        trivActFBCnt++; action2164_64(onAfterFBAction);  return 0;
   } //1
 
     }
@@ -482,7 +480,7 @@ function Update_qu2164() {
   var val = VarQuestion_0001.getValue()
   radio2169.objLyr.doc.getElementById("radio2169id").checked=(val=='Before having direct contact with a patient ')
   radio2171.objLyr.doc.getElementById("radio2171id").checked=(val=='Before inserting an invasive device (e.g., intravascular catheter, foley')
-  radio2173.objLyr.doc.getElementById("radio2173id").checked=(val=='When moving from a contaminated body site to a clean body site during an')
+  radio2173.objLyr.doc.getElementById("radio2173id").checked=(val=='When moving from a contaminated body site to a clean body site ')
   radio2175.objLyr.doc.getElementById("radio2175id").checked=(val=='After having direct contact with a patient or with items in the immediate')
   radio2177.objLyr.doc.getElementById("radio2177id").checked=(val=='After removing gloves ')
   radio2207.objLyr.doc.getElementById("radio2207id").checked=(val=='All of the above')
@@ -492,32 +490,32 @@ function Update_qu2164() {
 function RandomizeQu_2164() {
   qu2164.randomize();
 }
-function action2164_41(fn){
-    if(!document.getElementById("DLG_Div_2164"))trivAlert( 'action2164_41', 'Title 3', 'You answered the question incorrectly.', fn );
+function action2164_59(fn){
+    if(!document.getElementById("DLG_Div_2164"))trivAlert( 'action2164_59', 'Title 3', 'You answered the question incorrectly.', fn );
 }
 
-function action2164_42(fn){
-    if(!document.getElementById("DLG_Div_2164"))trivAlert( 'action2164_42', 'Title 3', 'You answered the question incorrectly.', fn );
+function action2164_60(fn){
+    if(!document.getElementById("DLG_Div_2164"))trivAlert( 'action2164_60', 'Title 3', 'You answered the question incorrectly.', fn );
 }
 
-function action2164_43(fn){
-    if(!document.getElementById("DLG_Div_2164"))trivAlert( 'action2164_43', 'Title 3', 'You answered the question incorrectly.', fn );
+function action2164_61(fn){
+    if(!document.getElementById("DLG_Div_2164"))trivAlert( 'action2164_61', 'Title 3', 'You answered the question incorrectly.', fn );
 }
 
-function action2164_44(fn){
-    if(!document.getElementById("DLG_Div_2164"))trivAlert( 'action2164_44', 'Title 3', 'You answered the question incorrectly.', fn );
+function action2164_62(fn){
+    if(!document.getElementById("DLG_Div_2164"))trivAlert( 'action2164_62', 'Title 3', 'You answered the question incorrectly.', fn );
 }
 
-function action2164_45(fn){
-    if(!document.getElementById("DLG_Div_2164"))trivAlert( 'action2164_45', 'Title 3', 'You answered the question incorrectly.', fn );
+function action2164_63(fn){
+    if(!document.getElementById("DLG_Div_2164"))trivAlert( 'action2164_63', 'Title 3', 'You answered the question incorrectly.', fn );
 }
 
-function action2164_46(fn){
-    if(!document.getElementById("DLG_Div_2164"))trivAlert( 'action2164_46', 'Title 3', 'Correct!', fn );
+function action2164_64(fn){
+    if(!document.getElementById("DLG_Div_2164"))trivAlert( 'action2164_64', 'Title 3', 'Correct!', fn );
 }
 
 if( is.min ){
-button147 = new ObjButton('button147', 'Home',834,14,49.00,48.00,1,36,'div','',1,'',0)
+button147 = new ObjButton('button147', 'Home',834,14,49.00,48.00,1,35,'div','',1,'',0)
 button147.setFillStyle(4)
 button147.initRotateAngle(0,0,0,-0.00,-0.00,49,48)
 button147.initHasShadow(0)
@@ -532,7 +530,7 @@ button147.hasOnUp = true
 button147.capture=4
 button147.build()
 
-button141 = new ObjButton('button141', 'Help',888,14,49.00,48.00,1,37,'div','',0,'',0)
+button141 = new ObjButton('button141', 'Help',888,14,49.00,48.00,1,36,'div','',0,'',0)
 button141.setFillStyle(4)
 button141.initRotateAngle(0,0,0,-0.00,-0.00,49,48)
 button141.initHasShadow(0)
@@ -547,7 +545,7 @@ button141.hasOnUp = true
 button141.capture=4
 button141.build()
 
-button135 = new ObjButton('button135', 'Exit',941,14,49.00,48.00,1,38,'div','',1,'',0)
+button135 = new ObjButton('button135', 'Exit',941,14,49.00,48.00,1,37,'div','',1,'',0)
 button135.setFillStyle(4)
 button135.initRotateAngle(0,0,0,-0.00,-0.00,49,48)
 button135.initHasShadow(0)
@@ -562,7 +560,7 @@ button135.hasOnUp = true
 button135.capture=4
 button135.build()
 
-button128 = new ObjButton('button128', 'Back',888,601,48.00,48.00,1,39,'div','',1,'',1)
+button128 = new ObjButton('button128', 'Back',888,601,48.00,48.00,1,38,'div','',1,'',1)
 button128.setFillStyle(4)
 button128.initRotateAngle(0,0,0,-0.00,-0.00,48,48)
 button128.initHasShadow(0)
@@ -577,7 +575,7 @@ button128.hasOnUp = true
 button128.capture=4
 button128.build()
 
-button121 = new ObjButton('button121', 'Next',941,601,48.00,48.00,1,40,'div','',1,'',1)
+button121 = new ObjButton('button121', 'Next',941,601,48.00,48.00,1,39,'div','',1,'',1)
 button121.setFillStyle(4)
 button121.initRotateAngle(0,0,0,-0.00,-0.00,48,48)
 button121.initHasShadow(0)
@@ -592,12 +590,11 @@ button121.hasOnUp = true
 button121.capture=4
 button121.build()
 
-og151 = new ObjInline('og151',null,0,0,1009,662,1,0)
+og151 = new ObjInline('og151',null,0,0,-1,-1,1,0)
 og151.isGrp = true
 og151.addChild('image153')
 og151.addChild('image155')
 og151.addChild('image157')
-og151.addChild('text1274')
 og151.build()
 
 image153 = new ObjImage('image153','images/top_bar.png','',0,0,1009,81,1,5,'div',null, 0 )
@@ -630,15 +627,7 @@ image157.addBorder(0)
 image157.addOpacity(100)
 image157.build()
 
-text1274 = new ObjImage('text1274','images/text1274.png','Sample Project',10,19,212,53,1,8,'div',null,0 )
-text1274.initRotateAngle(0,0,0)
-text1274.initHasShadow(0)
-text1274.addIe8Attr(10, 19, 212, 53, 0, 0)
-text1274.addBorder(0)
-text1274.addOpacity(100)
-text1274.build()
-
-text116 = new ObjText('text116',null,246,33,548,37,1,9,null,'div',null,0 )
+text116 = new ObjText('text116',null,246,33,548,37,1,8,null,'div',null,0 )
 text116.initSLine(1)
 text116.initHasBullet(0)
 text116.initRotateAngle(0,0,0)
@@ -654,7 +643,7 @@ text116.arrCSSStyles.push('span.text116Font1 { font-size:24px; font-family:"Sego
 text116.arrCSSStyles.push('span.text116Font2 { font-size:13px; font-family:"Arial", sans-serif; color:#010101;}');
 text116.build()
 
-qu2164 = new ObjInline('qu2164',null,140,200,801,299,1,0)
+qu2164 = new ObjInline('qu2164',null,63,117,771,275,1,0)
 qu2164.isGrp = true
 qu2164.addChild('text2167')
 qu2164.addChild('text2168')
@@ -678,7 +667,7 @@ qu2164.addChoice('radio2207','text2206','')
 qu2164.ansVar=VarQuestion_0001;
 qu2164.build()
 
-text2167 = new ObjText('text2167',null,140,200,729,32,1,10,null,'div',null,0 )
+text2167 = new ObjText('text2167',null,140,200,729,32,1,9,null,'div',null,0 )
 text2167.initSLine(1)
 text2167.initHasBullet(0)
 text2167.initRotateAngle(0,0,0)
@@ -694,7 +683,7 @@ text2167.arrCSSStyles.push('span.text2167Font1 { font-size:19px; font-family:"Ar
 text2167.arrCSSStyles.push('span.text2167Font2 { font-size:19px; font-family:"Arial", sans-serif; color:#000000;}');
 text2167.build()
 
-text2168 = new ObjText('text2168',null,167,240,702,32,1,11,null,'div',null,0 )
+text2168 = new ObjText('text2168',null,167,240,702,32,1,10,null,'div',null,0 )
 text2168.initSLine(1)
 text2168.initHasBullet(0)
 text2168.initRotateAngle(0,0,0)
@@ -709,12 +698,12 @@ text2168.arrCSSStyles = new Array();
 text2168.arrCSSStyles.push('span.text2168Font1 { font-size:19px; font-family:"Arial", sans-serif; color:#000000;}');
 text2168.build()
 
-radio2169 = new ObjInline('radio2169',null,(is.ie?138:137),(is.ie?239:238),null,null,1,12, 0, null, null, 0)
+radio2169 = new ObjInline('radio2169',null,(is.ie?138:137),(is.ie?239:238),null,null,1,11, 0, null, null, 0)
 radio2169.arrCSSStyles = new Array();
 radio2169.arrCSSStyles.push('');
 radio2169.build()
 
-text2170 = new ObjText('text2170',null,167,280,702,32,1,13,null,'div',null,0 )
+text2170 = new ObjText('text2170',null,167,280,702,32,1,12,null,'div',null,0 )
 text2170.initSLine(1)
 text2170.initHasBullet(0)
 text2170.initRotateAngle(0,0,0)
@@ -729,12 +718,12 @@ text2170.arrCSSStyles = new Array();
 text2170.arrCSSStyles.push('span.text2170Font1 { font-size:19px; font-family:"Arial", sans-serif; color:#000000;}');
 text2170.build()
 
-radio2171 = new ObjInline('radio2171',null,(is.ie?138:137),(is.ie?279:278),null,null,1,14, 0, null, null, 0)
+radio2171 = new ObjInline('radio2171',null,(is.ie?138:137),(is.ie?279:278),null,null,1,13, 0, null, null, 0)
 radio2171.arrCSSStyles = new Array();
 radio2171.arrCSSStyles.push('');
 radio2171.build()
 
-text2172 = new ObjText('text2172',null,167,320,702,32,1,15,null,'div',null,0 )
+text2172 = new ObjText('text2172',null,167,320,702,32,1,14,null,'div',null,0 )
 text2172.initSLine(1)
 text2172.initHasBullet(0)
 text2172.initRotateAngle(0,0,0)
@@ -749,13 +738,13 @@ text2172.arrCSSStyles = new Array();
 text2172.arrCSSStyles.push('span.text2172Font1 { font-size:19px; font-family:"Arial", sans-serif; color:#000000;}');
 text2172.build()
 
-radio2173 = new ObjInline('radio2173',null,(is.ie?138:137),(is.ie?319:318),null,null,1,16, 0, null, null, 0)
+radio2173 = new ObjInline('radio2173',null,(is.ie?138:137),(is.ie?319:318),null,null,1,15, 0, null, null, 0)
 radio2173.arrCSSStyles = new Array();
 radio2173.arrCSSStyles.push('');
 radio2173.build()
 
-text2174 = new ObjText('text2174',null,167,360,702,32,1,17,null,'div',null,0 )
-text2174.initSLine(1)
+text2174 = new ObjText('text2174',null,167,360,702,32,1,16,null,'div',null,0 )
+text2174.initSLine(0)
 text2174.initHasBullet(0)
 text2174.initRotateAngle(0,0,0)
 text2174.initHasOuterShadow(0)
@@ -769,12 +758,12 @@ text2174.arrCSSStyles = new Array();
 text2174.arrCSSStyles.push('span.text2174Font1 { font-size:19px; font-family:"Arial", sans-serif; color:#000000;}');
 text2174.build()
 
-radio2175 = new ObjInline('radio2175',null,(is.ie?138:137),(is.ie?359:358),null,null,1,18, 0, null, null, 0)
+radio2175 = new ObjInline('radio2175',null,(is.ie?138:137),(is.ie?359:358),null,null,1,17, 0, null, null, 0)
 radio2175.arrCSSStyles = new Array();
 radio2175.arrCSSStyles.push('');
 radio2175.build()
 
-text2176 = new ObjText('text2176',null,167,400,702,32,1,19,null,'div',null,0 )
+text2176 = new ObjText('text2176',null,167,400,702,32,1,18,null,'div',null,0 )
 text2176.initSLine(1)
 text2176.initHasBullet(0)
 text2176.initRotateAngle(0,0,0)
@@ -789,12 +778,12 @@ text2176.arrCSSStyles = new Array();
 text2176.arrCSSStyles.push('span.text2176Font1 { font-size:19px; font-family:"Arial", sans-serif; color:#000000;}');
 text2176.build()
 
-radio2177 = new ObjInline('radio2177',null,(is.ie?138:137),(is.ie?399:398),null,null,1,20, 0, null, null, 0)
+radio2177 = new ObjInline('radio2177',null,(is.ie?138:137),(is.ie?399:398),null,null,1,19, 0, null, null, 0)
 radio2177.arrCSSStyles = new Array();
 radio2177.arrCSSStyles.push('');
 radio2177.build()
 
-text2206 = new ObjText('text2206',null,167,440,702,32,1,21,null,'div',null,0 )
+text2206 = new ObjText('text2206',null,167,440,702,32,1,20,null,'div',null,0 )
 text2206.initSLine(1)
 text2206.initHasBullet(0)
 text2206.initRotateAngle(0,0,0)
@@ -809,12 +798,12 @@ text2206.arrCSSStyles = new Array();
 text2206.arrCSSStyles.push('span.text2206Font1 { font-size:19px; font-family:"Arial", sans-serif; color:#000000;}');
 text2206.build()
 
-radio2207 = new ObjInline('radio2207',null,(is.ie?138:137),(is.ie?439:438),null,null,1,22, 0, null, null, 0)
+radio2207 = new ObjInline('radio2207',null,(is.ie?138:137),(is.ie?439:438),null,null,1,21, 0, null, null, 0)
 radio2207.arrCSSStyles = new Array();
 radio2207.arrCSSStyles.push('');
 radio2207.build()
 
-text2118 = new ObjText('text2118',null,20,102,755,33,1,23,null,'div',null,0 )
+text2118 = new ObjText('text2118',null,20,102,755,33,1,22,null,'div',null,0 )
 text2118.initSLine(1)
 text2118.initHasBullet(0)
 text2118.initRotateAngle(0,0,0)
@@ -840,7 +829,6 @@ arObjs.push(og151);
 arObjs.push(image153);
 arObjs.push(image155);
 arObjs.push(image157);
-arObjs.push(text1274);
 arObjs.push(text116);
 arObjs.push(qu2164);
 arObjs.push(text2167);
@@ -895,7 +883,6 @@ if( is.min ){
     document.write(image153.div)
     document.write(image155.div)
     document.write(image157.div)
-    document.write(text1274.div)
 }
 </script>
 
@@ -935,12 +922,12 @@ if( is.min ){
 </div>
 <div id="text2172"><a id="text2172anc" style="display:block;height:0px;width:0px;"></a>
 <label id="label2173id" for="radio2173id" ><p  style="margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:left;" >
-<span class="text2172Font1"  >When moving from a contaminated body site to a clean body site during an
+<span class="text2172Font1"  >When moving from a contaminated body site to a clean body site 
 </span ></p >
 </label></div>
 
 <div id="radio2173"><a id="radio2173anc"></a>
-<input type="radio" name="qu2164" id="radio2173id" value="When moving from a contaminated body site to a clean body site during an" onClick="VarQuestion_0001.set(this.value);Update_qu2164();doImmFeedback('qu2164');" >
+<input type="radio" name="qu2164" id="radio2173id" value="When moving from a contaminated body site to a clean body site " onClick="VarQuestion_0001.set(this.value);Update_qu2164();doImmFeedback('qu2164');" >
 </div>
 <div id="text2174"><a id="text2174anc" style="display:block;height:0px;width:0px;"></a>
 <label id="label2175id" for="radio2175id" ><p  style="margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:left;" >
