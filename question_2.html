@@ -345,12 +345,12 @@ function doImmFeedback( objId ) {
   if(!qu2229.hasBeenProcessed) {
     if( ans_VarQuestion_0002 == '\u0054\u0072\u0075\u0065' ) 
     { //1 
-        trivActFBCnt++; action2229_7(onAfterFBAction);  return 0;
+        trivActFBCnt++; action2229_9(onAfterFBAction);  return 0;
   } //1
 
     else if( ans_VarQuestion_0002 != '\u0054\u0072\u0075\u0065' && ans_VarQuestion_0002 != '~~~null~~~' ) 
     { //2 
-trivActFBCnt++; action2229_8(onAfterFBAction);return 0;  } //2 
+trivActFBCnt++; action2229_10(onAfterFBAction);return 0;  } //2 
 
     }
   }
@@ -451,12 +451,12 @@ function Update_qu2229() {
    qu2229.hasBeenProcessed=false;
 }
 
-function action2229_7(fn){
-    if(!document.getElementById("DLG_Div_2229"))trivAlert( 'action2229_7', 'Title 3', 'Correct!', fn );
+function action2229_9(fn){
+    if(!document.getElementById("DLG_Div_2229"))trivAlert( 'action2229_9', 'Title 3', 'Correct!', fn );
 }
 
-function action2229_8(fn){
-    if(!document.getElementById("DLG_Div_2229"))trivAlert( 'action2229_8', 'Title 3', 'You answered the question incorrectly.', fn );
+function action2229_10(fn){
+    if(!document.getElementById("DLG_Div_2229"))trivAlert( 'action2229_10', 'Title 3', 'You answered the question incorrectly.', fn );
 }
 
 if( is.min ){
